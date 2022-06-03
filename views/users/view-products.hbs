@@ -1,0 +1,155 @@
+<section>
+  <div class="container mt-5">
+    <div class="row">
+      {{#each products}}
+
+
+
+      <div class="col-md-3">
+        <div class="card" style="width: 15rem;height:37rem;">
+          <img class="card-img-top" src="/product-images/{{this._id}}.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{this.Name}}</h5>
+            <p class="card-text">Rs.{{this.Price}}</p>
+            <p class="card-text">{{this.Description}}</p>
+            {{!-- <a href="/add-to-cart/{{this._id}}" class="btn btn-primary" style="position:absolute; bottom:5px;">Add
+              to cart</a> --}}
+            <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+
+
+
+    </div>
+  </div>
+</section>
+<style !important>
+  /* Image */
+.row .card img{
+ padding-top:0px;
+ transform:translatex(0px) translatey(0px);
+ height:247px;
+ margin-bottom:2px;
+ width:82% !important;
+}
+
+/* Card body */
+.row .card .card-body{
+ padding-top:17px !important;
+ transform:translatex(0px) translatey(-34px) !important;
+}
+
+/* Button */
+.row .card .btn-primary{
+ transform:translatex(19px) translatey(67px) !important;
+}
+
+/* Card */
+.row .card{
+ height:577px !important;
+}
+
+/* Row */
+section .row{
+ margin-bottom:30px;
+ min-height:606px;
+ transform:translatex(0px) translatey(-33px) !important;
+}
+
+/* Section */
+section{
+ transform:translatex(0px) translatey(3px);
+}
+
+@media (max-width:768px){
+
+ /* Row */
+ section .row{
+  margin-bottom:0px;
+  transform:translatex(19px) translatey(67px) !important;
+ }
+ 
+}
+</style>
+<style>/* Row */
+section .row{
+ margin-top:32px;
+ transform:translatex(14px) translatey(35px);
+}
+
+/* Image */
+.row .card img{
+ margin-top:0px;
+ transform:translatex(0px) translatey(0px);
+ width:100%;
+ position:static;
+}
+
+/* Button */
+.row .card .btn-primary{
+ transform:translatex(12px) translatey(31px);
+ padding-bottom:6px;
+ margin-left:-3px;
+ margin-bottom:-17px;
+ margin-top:-7px;
+ position:fixed;
+ top:204px;
+ right:88px;
+}
+
+/* Card body */
+.row .card .card-body{
+ transform:translatex(3px) translatey(-14px);
+ padding-bottom:18px;
+ min-height:309px;
+ margin-left:-2px;
+ padding-top:21px;
+ position:absolute;
+ top:296px;
+ width:237px;
+}
+
+/* Card */
+.row .card{
+ transform:translatex(12px) translatey(31px);
+ 
+}
+
+</style>
+<style !important>
+  /* Paragraph */
+.row .card p{
+ color:#3362c1;
+}
+
+/* Heading */
+.row .card h5{
+ color:#2c7149;
+}
+
+/* Button */
+.row .card .btn-primary{
+ font-weight:500;
+ color:rgb(255, 255, 255);
+ background-color:#37ff00;
+ background-attachment:scroll;
+ background-size:auto;
+ background-clip:padding-box;
+ background-position-y:0%;
+ border-width:3px;
+ border-style:solid;
+ border-top-left-radius:6px;
+ border-top-right-radius:6px;
+ border-bottom-left-radius:6px;
+ border-bottom-right-radius:6px;
+}
+
+/* Button */
+section .container .row .col-md-3 .card .card-body .btn-primary{
+ transform:translatex(28px) translatey(66px) !important;
+}
+
+
+</style>

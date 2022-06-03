@@ -1,0 +1,234 @@
+h2.text-center {
+    margin-bottom: 1em !important;
+}
+
+fieldset {
+    border: solid 5px rgb(183, 9, 9) !important;
+    padding: 10px 10px 10px 10px !important;
+    background-color: #eeeeee;
+}
+
+legend {
+    width: auto !important;
+    border: solid !important;
+    color: blue !important;
+    padding: 0 10px !important;
+    font-size: large !important;
+    background-color: gray;
+}
+
+table.table mt-5 {
+    counter-reset: rowNumber !important;
+}
+
+
+/* tr.counter:not(:first-child) {
+    counter-increment: rowNumber !important;
+} */
+
+tr.counter {
+    counter-increment: rowNumber !important;
+}
+
+td.counter:first-child::before {
+    content: counter(rowNumber) !important;
+    min-width: 1em !important;
+    margin-right: 0.5em !important;
+}
+
+div.dropdown {
+    position: relative !important;
+    right: 3% !important;
+}
+
+
+/* *********************************************************************************************************************** */
+
+
+/************************ SIGNUP REGISTER BUTTON *********************************/
+
+
+/* html,
+body {
+    height: 100%;
+} */
+
+.flashDiv {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashBut {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    top: 5px;
+}
+
+.flashBut::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.flashBut:hover,
+.flashBut:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+.flashBut:hover::before,
+.flashBut:focus::before {
+    opacity: 1;
+}
+
+.flashBut::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.flashBut:hover::after,
+.flashBut:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+
+/* ****************************************************************************************** */
+
+
+/******************************* User Login Button *********************************************/
+
+
+/* html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+} */
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    bottom: 4px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 10px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(0, 0, 0)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(17, 17, 17);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/* ************************************************************************************************ */
