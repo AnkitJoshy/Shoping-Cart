@@ -258,15 +258,7 @@ module.exports = {
     },
     placeOrder: (order, products, total) => {
         return new Promise((resolve, reject) => {
-            // console.log(order, products, total)
-            // check below
-            // [Object: null prototype] {
-            // fullName: 'Ankit',
-            // email: 'ankit@gmail.com',
-            // address: 'f334',
-            // city: 'frf354r',
-            // userId: '62656e3aeecd2d36347b72ec',
-            // 'payment-method': 'COD',
+            
             let status = order['payment-method'] === 'COD' ? 'placed' : 'pending'
             let orderObj = {
                 deliveryDetails: {
